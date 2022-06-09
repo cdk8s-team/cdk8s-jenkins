@@ -7,7 +7,7 @@ const project = new cdk8s.ConstructLibraryCdk8s({
   authorAddress: 'https://aws.amazon.com',
   cdk8sVersion: '2.3.16',
   defaultReleaseBranch: 'main',
-  repositoryUrl: 'git@github.com:cdk8s-team/cdk8s-jenkins.git',
+  repositoryUrl: 'https://github.com/cdk8s-team/cdk8s-jenkins',
   peerDeps: [
     'cdk8s',
     'constructs',
