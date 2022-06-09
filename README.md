@@ -13,6 +13,8 @@ kubectl apply -f https://raw.githubusercontent.com/jenkinsci/kubernetes-operator
 ```
 kubectl apply -f https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/deploy/all-in-one-v1alpha2.yaml
 ```
+For more information regarding applying jenkins crd and installing jenkins operator, please refer [jenkins official documentaion](https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/installing-the-operator/).
+
 ## Usage
 The construct provides a high level API abstraction for user to provision Jenkins resource for their cluster. 
 The user can just instantiate the Jenkins instance and that would add a Jenkins resource to the kubernetes manifest. 
