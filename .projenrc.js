@@ -14,6 +14,14 @@ const project = new cdk8s.ConstructLibraryCdk8s({
   devDeps: [
     '@cdk8s/projen-common',
   ],
+  jestOptions: {
+    jestConfig: {
+      coveragePathIgnorePatterns: [
+        'src/imports/*',
+      ],
+      verbose: false,
+    },
+  },
   peerDeps: [
     'cdk8s',
     'constructs',
