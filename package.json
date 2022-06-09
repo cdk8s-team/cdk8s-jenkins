@@ -3,7 +3,7 @@
   "description": "Jenkins construct for CDK8s",
   "repository": {
     "type": "git",
-    "url": "git@github.com:cdk8s-team/cdk8s-jenkins.git"
+    "url": "https://github.com/cdk8s-team/cdk8s-jenkins"
   },
   "scripts": {
     "build": "npx projen build",
