@@ -12,6 +12,7 @@ const project = new cdk8s.ConstructLibraryCdk8s({
     'cdk8s',
     'constructs',
   ],
+  release: false,
   publishToMaven: {
     javaPackage: 'org.cdk8s.jenkins',
     mavenGroupId: 'org.cdk8s',
