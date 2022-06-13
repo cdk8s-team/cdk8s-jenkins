@@ -1,5 +1,8 @@
+const { Cdk8sCommon } = require('@cdk8s/projen-common');
 const { cdk8s } = require('projen');
+
 const project = new cdk8s.ConstructLibraryCdk8s({
+  ...Cdk8sCommon.props,
   name: 'cdk8s-jenkins',
   packageName: 'cdk8s-jenkins',
   description: 'Jenkins construct for CDK8s',
@@ -8,6 +11,9 @@ const project = new cdk8s.ConstructLibraryCdk8s({
   cdk8sVersion: '2.3.16',
   defaultReleaseBranch: 'main',
   repositoryUrl: 'https://github.com/cdk8s-team/cdk8s-jenkins',
+  devDeps: [
+    '@cdk8s/projen-common',
+  ],
   peerDeps: [
     'cdk8s',
     'constructs',
@@ -26,5 +32,13 @@ const project = new cdk8s.ConstructLibraryCdk8s({
     dotNetNamespace: 'Org.Cdk8s.Jenkins',
     packageId: 'Org.Cdk8s.Jenkins',
   },
+  depsUpgradeOptions: {
+    workflowOptions: {
+      schedule: Cdk8sCommon.upgradeScheduleFor('cdk8s-jenkins'),
+    },
+  },
 });
+
+new Cdk8sCommon(project);
+
 project.synth();
