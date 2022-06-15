@@ -4,11 +4,11 @@
 ## Prerequisites
 This library uses a Custom Resource Definition provided by jenkins, and thus requires both the CRD and the operator to be installed on the cluster. 
 You can set this up by,
-1. Apply the Custom Resource Definition(CRD) for jenkins on their Kubernetes cluster.
+1. Apply the Custom Resource Definition(CRD) for jenkins on your Kubernetes cluster.
 ```
 kubectl apply -f https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/config/crd/bases/jenkins.io_jenkins.yaml
 ```
-2. Install the Jenkins Operator on their Kubernetes cluster. 
+2. Install the Jenkins Operator on your Kubernetes cluster. 
 ```
 kubectl apply -f https://raw.githubusercontent.com/jenkinsci/kubernetes-operator/master/deploy/all-in-one-v1alpha2.yaml
 ```
@@ -19,7 +19,7 @@ kubectl apply -f https://raw.githubusercontent.com/jenkinsci/kubernetes-operator
 The library provides a high level `Jenkins` construct to provision a Jenkins instance. 
 You can just instantiate the Jenkins instance and that would add a Jenkins resource to the kubernetes manifest. 
 
-The library provide a set of defaults to the user, so provisioning a basic Jenkins instance requires no configuration:
+The library provide a set of defaults, so provisioning a basic Jenkins instance requires no configuration:
 
 ```ts
 import { Jenkins } from 'cdk8s-jenkins';
@@ -56,7 +56,6 @@ const jenkins = new Jenkins(this, 'my-jenkins', {
 ```
 
 You can also utilize `addBasePlugins` function to add base plugins to jenkins configuration after initialization.
-
 ```ts
 const jenkins = new Jenkins(this, 'my-jenkins');
 jenkins.addBasePlugins([{
@@ -75,6 +74,7 @@ const jenkins = new Jenkins(this, 'my-jenkins', {
     }],
 });
 ```
+
 You can also utilize `addPlugins` function to add plugins to jenkins configuration after initialization.
 ```ts
 const jenkins = new Jenkins(this, 'my-jenkins');
@@ -85,7 +85,7 @@ jenkins.addPlugins([{
 ```
 
 ### seedJobs
-You can define list of Jenkins Seed Job configurations here. For more info you can take look at jenkins [documentation](https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/configuring-seed-jobs-and-pipelines/).
+You can define list of jenkins seed job configurations here. For more info you can take look at [jenkins documentation](https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/configuring-seed-jobs-and-pipelines/).
 
 ```ts
 const jenkins = new Jenkins(this, 'my-jenkins', {
@@ -98,6 +98,7 @@ const jenkins = new Jenkins(this, 'my-jenkins', {
     }],
 });
 ```
+
 You can also utilize `addSeedJobs` function to add seed jobs to jenkins configuration after initialization.
 ```ts
 const jenkins = new Jenkins(this, 'my-jenkins');
@@ -112,7 +113,7 @@ jenkins.addSeedJobs([{
 
 ## Using escape hatches
 
-You can utilize escape hatches to make changes to the configuration that is not yet exposed by the library. 
+You can utilize escape hatches to make changes to the configurations that are not yet exposed by the library. 
 
 For instance, if you would like to update the version of a base plugin:
 
@@ -135,4 +136,3 @@ information.
 ## License
 
 This project is licensed under the Apache-2.0 License.
-
