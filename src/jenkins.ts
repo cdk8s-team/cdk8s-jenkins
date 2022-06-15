@@ -13,40 +13,40 @@ export interface Plugins {
   readonly downloadUrl?: string;
 
   /**
-    * The name of Jenkins plugin.
-    */
+   * The name of Jenkins plugin.
+   */
   readonly name: string;
 
   /**
-    * The version of Jenkins plugin.
-    */
+   * The version of Jenkins plugin.
+   */
   readonly version: string;
 }
 
 export interface SeedJobs {
   /**
-    * The unique name for the seed job.
-    */
+   * The unique name for the seed job.
+   */
   readonly id: string;
 
   /**
-    * The description of the seed job.
-    */
+   * The description of the seed job.
+   */
   readonly description: string;
 
   /**
-    * The repository branch where seed job definitions are present.
-    */
+   * The repository branch where seed job definitions are present.
+   */
   readonly repositoryBranch: string;
 
   /**
-    * The repository access URL. Supports SSH and HTTPS.
-    */
+   * The repository access URL. Supports SSH and HTTPS.
+   */
   readonly repositoryUrl: string;
 
   /**
-    * The repository path where seed job definitions are present.
-    */
+   * The repository path where seed job definitions are present.
+   */
   readonly targets: string;
 }
 
@@ -76,8 +76,21 @@ export class Jenkins extends Construct {
       metadata: {
         namespace: namespace,
         labels: labels,
+        name: 'cdk8s-jenkins-construct',
       },
       spec: {
+        groovyScripts: {
+          configurations: [],
+          secret: {
+            name: '',
+          },
+        },
+        configurationAsCode: {
+          configurations: [],
+          secret: {
+            name: '',
+          },
+        },
         jenkinsApiSettings: {
           authorizationStrategy: authorizationStrategy,
         },
@@ -169,7 +182,7 @@ function getJenkinsBasePlugins(basePluginsUpdates: Plugins[] | undefined): Plugi
 function getContainerConfiguration(): JenkinsContainerConfiguration[] {
   let jenkinsContainersConfiguration: JenkinsContainerConfiguration[] = [
     {
-      name: 'jenkins-primary',
+      name: 'jenkins-master',
       image: 'jenkins/jenkins:lts',
       imagePullPolicy: 'Always',
       resources: {
@@ -187,6 +200,3 @@ function getContainerConfiguration(): JenkinsContainerConfiguration[] {
 
   return jenkinsContainersConfiguration;
 }
-
-// TODO
-// Add groovy and configuration as code and verify manifest generated works

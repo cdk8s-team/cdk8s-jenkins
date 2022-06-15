@@ -73,7 +73,6 @@
     "coveragePathIgnorePatterns": [
       "src/imports/*"
     ],
-    "verbose": false,
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
       "<rootDir>/(test|src)/**/?(*.)+(spec|test).ts?(x)"

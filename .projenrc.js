@@ -19,7 +19,6 @@ const project = new cdk8s.ConstructLibraryCdk8s({
       coveragePathIgnorePatterns: [
         'src/imports/*',
       ],
-      verbose: false,
     },
   },
   peerDeps: [

@@ -5,7 +5,7 @@ import {
 } from '../src/imports/jenkins.io';
 
 describe('a jenkins instance', () => {
-  test('defaults', () => {
+  test('with defaults', () => {
     // GIVEN
     const app = Testing.app();
     const chart = new Chart(app, 'test');
@@ -243,7 +243,7 @@ describe('a jenkins instance', () => {
 
     // THEN
     const manifest = Testing.synth(chart);
-    console.log(JSON.stringify(manifest, null, 4));
+
     expect(manifest).toMatchSnapshot();
     expect(manifest[0].metadata.namespace).toEqual(namespace);
     expect(manifest[0].metadata.labels).toEqual(labels);
