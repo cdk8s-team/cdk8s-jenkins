@@ -561,7 +561,7 @@
     chalk "^4.1.2"
     semver "^7.3.7"
 
-"@jsii/spec@1.61.0", "@jsii/spec@^1.60.1", "@jsii/spec@^1.61.0":
+"@jsii/spec@1.61.0", "@jsii/spec@^1.44.0", "@jsii/spec@^1.61.0":
   version "1.61.0"
   resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.61.0.tgz#0529432d2bf6963374e3bfd6c36d95800defbefb"
   integrity sha512-pv1jAZY+gez62BCiHwfdCnjl2reye88QOKsD5IlCf7XbmvyQ4xFXVV2EnFzv4HUUtr+yuBj/tZz0HjOFsEBUQw==
@@ -3385,14 +3385,14 @@ jsii-docgen@^7.0.35:
   resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.35.tgz#f60807e2eb228646dfc674c344293dd90b83fc15"
   integrity sha512-lb99vOPerOk+vPUyCYrkCtRnj+Oq01ppkGJsIJk4FMAbWHUqmP3Y455fU0VTMMIkoY645sN2r0tSY/q+j8sc+Q==
   dependencies:
-    "@jsii/spec" "^1.44.0"
+    "@jsii/spec" "^1.60.1"
     case "^1.6.3"
-    fs-extra "^10.0.0"
-    glob "^7.2.0"
+    fs-extra "^10.1.0"
+    glob "^7.2.3"
     glob-promise "^3.4.0"
-    jsii-reflect "^1.44.0"
-    jsii-rosetta "^1.44.0"
-    semver "^7.3.5"
+    jsii-reflect "^1.60.1"
+    jsii-rosetta "^1.60.1"
+    semver "^7.3.7"
     yargs "^16.2.0"
 
 jsii-pacmak@^1.61.0:
@@ -3414,7 +3414,7 @@ jsii-pacmak@^1.61.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-reflect@^1.60.1, jsii-reflect@^1.61.0:
+jsii-reflect@^1.44.0, jsii-reflect@^1.61.0:
   version "1.61.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.61.0.tgz#23a2b0151987dd9cc27fb046abe40c87dee8f8d8"
   integrity sha512-nqBylNBqJJoTJR9TpywW5i55zaOWlNxJTHSWyVYJnrp5ZuYI2R0+nMUxux1hT0Zbd77KbRHXeSByW1aQ6Mfi/A==
@@ -3426,7 +3426,7 @@ jsii-reflect@^1.60.1, jsii-reflect@^1.61.0:
     oo-ascii-tree "^1.61.0"
     yargs "^16.2.0"
 
-jsii-rosetta@^1.60.1, jsii-rosetta@^1.61.0:
+jsii-rosetta@^1.44.0, jsii-rosetta@^1.61.0:
   version "1.61.0"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-1.61.0.tgz#ea82332545481aa373ac5b4826a303d16ec46b13"
   integrity sha512-n8y3er0nOchLo17Wh0/yVmCDGNuwlhccp/Liwvl0ewf0hYMC5vICjWTIdCetsRoQQIOuc4pOmMNomldTTlPUUw==
