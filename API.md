@@ -4,6 +4,8 @@
 
 ### Jenkins <a name="cdk8s-jenkins.Jenkins"></a>
 
+A jenkins instance.
+
 #### Initializers <a name="cdk8s-jenkins.Jenkins.Initializer"></a>
 
 ```typescript
@@ -35,36 +37,42 @@ new Jenkins(scope: Construct, id: string, props?: JenkinsProps)
 ##### `addBasePlugins` <a name="cdk8s-jenkins.Jenkins.addBasePlugins"></a>
 
 ```typescript
-public addBasePlugins(basePluginsUpdates: Plugins[])
+public addBasePlugins(basePlugins: Plugin)
 ```
 
-###### `basePluginsUpdates`<sup>Required</sup> <a name="cdk8s-jenkins.Jenkins.parameter.basePluginsUpdates"></a>
+###### `basePlugins`<sup>Required</sup> <a name="cdk8s-jenkins.Jenkins.parameter.basePlugins"></a>
 
-- *Type:* [`cdk8s-jenkins.Plugins`](#cdk8s-jenkins.Plugins)[]
+- *Type:* [`cdk8s-jenkins.Plugin`](#cdk8s-jenkins.Plugin)
+
+List of base plugins.
 
 ---
 
 ##### `addPlugins` <a name="cdk8s-jenkins.Jenkins.addPlugins"></a>
 
 ```typescript
-public addPlugins(plugins: Plugins[])
+public addPlugins(plugins: Plugin)
 ```
 
 ###### `plugins`<sup>Required</sup> <a name="cdk8s-jenkins.Jenkins.parameter.plugins"></a>
 
-- *Type:* [`cdk8s-jenkins.Plugins`](#cdk8s-jenkins.Plugins)[]
+- *Type:* [`cdk8s-jenkins.Plugin`](#cdk8s-jenkins.Plugin)
+
+List of custom plugins.
 
 ---
 
 ##### `addSeedJobs` <a name="cdk8s-jenkins.Jenkins.addSeedJobs"></a>
 
 ```typescript
-public addSeedJobs(seedJobs: SeedJobs[])
+public addSeedJobs(seedJobs: SeedJob)
 ```
 
 ###### `seedJobs`<sup>Required</sup> <a name="cdk8s-jenkins.Jenkins.parameter.seedJobs"></a>
 
-- *Type:* [`cdk8s-jenkins.SeedJobs`](#cdk8s-jenkins.SeedJobs)[]
+- *Type:* [`cdk8s-jenkins.SeedJob`](#cdk8s-jenkins.SeedJob)
+
+List of seed jobs.
 
 ---
 
@@ -74,6 +82,8 @@ public addSeedJobs(seedJobs: SeedJobs[])
 ## Structs <a name="Structs"></a>
 
 ### JenkinsProps <a name="cdk8s-jenkins.JenkinsProps"></a>
+
+Props for `Jenkins`.
 
 #### Initializer <a name="[object Object].Initializer"></a>
 
@@ -86,10 +96,13 @@ const jenkinsProps: JenkinsProps = { ... }
 ##### `basePlugins`<sup>Optional</sup> <a name="cdk8s-jenkins.JenkinsProps.property.basePlugins"></a>
 
 ```typescript
-public readonly basePlugins: Plugins[];
+public readonly basePlugins: Plugin[];
 ```
 
-- *Type:* [`cdk8s-jenkins.Plugins`](#cdk8s-jenkins.Plugins)[]
+- *Type:* [`cdk8s-jenkins.Plugin`](#cdk8s-jenkins.Plugin)[]
+- *Default:* { name: 'kubernetes', version: '1.31.3' }, { name: 'workflow-job', version: '1145.v7f2433caa07f' }, { name: 'workflow-aggregator', version: '2.6' }, { name: 'git', version: '4.10.3' }, { name: 'job-dsl', version: '1.78.1' }, { name: 'configuration-as-code', version: '1414.v878271fc496f' }, { name: 'kubernetes-credentials-provider', version: '0.20' }
+
+List of plugins required by Jenkins operator.
 
 ---
 
@@ -100,6 +113,9 @@ public readonly disableCsrfProtection: boolean;
 ```
 
 - *Type:* `boolean`
+- *Default:* false
+
+Toggle for CSRF Protection on Jenkins resource.
 
 ---
 
@@ -110,6 +126,9 @@ public readonly labels: {[ key: string ]: string};
 ```
 
 - *Type:* {[ key: string ]: `string`}
+- *Default:* { app: 'jenkins' }
+
+Labels to apply to all Jenkins resources.
 
 ---
 
@@ -120,40 +139,53 @@ public readonly namespace: string;
 ```
 
 - *Type:* `string`
+- *Default:* 'default'
+
+Namespace to apply to all Jenkins resources.
+
+The Jenkins Operator must be
+installed in this namespace for resources to be recognized.
 
 ---
 
 ##### `plugins`<sup>Optional</sup> <a name="cdk8s-jenkins.JenkinsProps.property.plugins"></a>
 
 ```typescript
-public readonly plugins: Plugins[];
+public readonly plugins: Plugin[];
 ```
 
-- *Type:* [`cdk8s-jenkins.Plugins`](#cdk8s-jenkins.Plugins)[]
+- *Type:* [`cdk8s-jenkins.Plugin`](#cdk8s-jenkins.Plugin)[]
+- *Default:* []
+
+List of custom plugins applied to Jenkins resource.
 
 ---
 
 ##### `seedJobs`<sup>Optional</sup> <a name="cdk8s-jenkins.JenkinsProps.property.seedJobs"></a>
 
 ```typescript
-public readonly seedJobs: SeedJobs[];
+public readonly seedJobs: SeedJob[];
 ```
 
-- *Type:* [`cdk8s-jenkins.SeedJobs`](#cdk8s-jenkins.SeedJobs)[]
+- *Type:* [`cdk8s-jenkins.SeedJob`](#cdk8s-jenkins.SeedJob)[]
+
+List of seed job configuration for Jenkins resource.
 
 ---
 
-### Plugins <a name="cdk8s-jenkins.Plugins"></a>
+### Plugin <a name="cdk8s-jenkins.Plugin"></a>
+
+Jenkins plugin.
 
 #### Initializer <a name="[object Object].Initializer"></a>
 
 ```typescript
-import { Plugins } from 'cdk8s-jenkins'
+import { Plugin } from 'cdk8s-jenkins'
 
-const plugins: Plugins = { ... }
+const plugin: Plugin = { ... }
 ```
 
-##### `name`<sup>Required</sup> <a name="cdk8s-jenkins.Plugins.property.name"></a>
+##### `name`<sup>Required</sup> <a name="cdk8s-jenkins.Plugin.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -165,7 +197,7 @@ The name of Jenkins plugin.
 
 ---
 
-##### `version`<sup>Required</sup> <a name="cdk8s-jenkins.Plugins.property.version"></a>
+##### `version`<sup>Required</sup> <a name="cdk8s-jenkins.Plugin.property.version"></a>
 
 ```typescript
 public readonly version: string;
@@ -177,7 +209,7 @@ The version of Jenkins plugin.
 
 ---
 
-##### `downloadUrl`<sup>Optional</sup> <a name="cdk8s-jenkins.Plugins.property.downloadUrl"></a>
+##### `downloadUrl`<sup>Optional</sup> <a name="cdk8s-jenkins.Plugin.property.downloadUrl"></a>
 
 ```typescript
 public readonly downloadUrl: string;
@@ -189,17 +221,19 @@ The url from where plugin has to be downloaded.
 
 ---
 
-### SeedJobs <a name="cdk8s-jenkins.SeedJobs"></a>
+### SeedJob <a name="cdk8s-jenkins.SeedJob"></a>
+
+Jenkins seed job.
 
 #### Initializer <a name="[object Object].Initializer"></a>
 
 ```typescript
-import { SeedJobs } from 'cdk8s-jenkins'
+import { SeedJob } from 'cdk8s-jenkins'
 
-const seedJobs: SeedJobs = { ... }
+const seedJob: SeedJob = { ... }
 ```
 
-##### `description`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJobs.property.description"></a>
+##### `description`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJob.property.description"></a>
 
 ```typescript
 public readonly description: string;
@@ -211,7 +245,7 @@ The description of the seed job.
 
 ---
 
-##### `id`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJobs.property.id"></a>
+##### `id`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJob.property.id"></a>
 
 ```typescript
 public readonly id: string;
@@ -223,7 +257,7 @@ The unique name for the seed job.
 
 ---
 
-##### `repositoryBranch`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJobs.property.repositoryBranch"></a>
+##### `repositoryBranch`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJob.property.repositoryBranch"></a>
 
 ```typescript
 public readonly repositoryBranch: string;
@@ -235,7 +269,7 @@ The repository branch where seed job definitions are present.
 
 ---
 
-##### `repositoryUrl`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJobs.property.repositoryUrl"></a>
+##### `repositoryUrl`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJob.property.repositoryUrl"></a>
 
 ```typescript
 public readonly repositoryUrl: string;
@@ -249,7 +283,7 @@ Supports SSH and HTTPS.
 
 ---
 
-##### `targets`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJobs.property.targets"></a>
+##### `targets`<sup>Required</sup> <a name="cdk8s-jenkins.SeedJob.property.targets"></a>
 
 ```typescript
 public readonly targets: string;

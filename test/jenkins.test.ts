@@ -1,8 +1,5 @@
 import { ApiObject, Chart, JsonPatch, Testing } from 'cdk8s';
 import { Jenkins } from '../src';
-import {
-  JenkinsSpecMasterBasePlugins as JenkinsBasePlugins,
-} from '../src/imports/jenkins.io';
 
 describe('a jenkins instance', () => {
   test('with defaults', () => {
@@ -85,11 +82,12 @@ describe('a jenkins instance', () => {
     // THEN
     const manifest = Testing.synth(chart);
     expect(manifest).toMatchSnapshot();
-    manifest[0].spec.master.basePlugins.forEach((plugin: JenkinsBasePlugins) => {
+
+    for (const plugin of manifest[0].spec.master.basePlugins) {
       if (plugin.name == basePlugins[0].name) {
         expect(plugin.version).toEqual(basePlugins[0].version);
       }
-    });
+    }
   });
 
   test('with a user added plugin', () => {
@@ -148,17 +146,16 @@ describe('a jenkins instance', () => {
 
     // WHEN
     const jenkins = new Jenkins(chart, 'my-jenkins');
-    jenkins.addBasePlugins(basePlugins);
+    jenkins.addBasePlugins(...basePlugins);
 
     // THEN
     const manifest = Testing.synth(chart);
 
-    expect(manifest).toMatchSnapshot();
-    manifest[0].spec.master.basePlugins.forEach((plugin: JenkinsBasePlugins) => {
+    for (const plugin of manifest[0].spec.master.basePlugins) {
       if (plugin.name == basePlugins[0].name) {
         expect(plugin.version).toEqual(basePlugins[0].version);
       }
-    });
+    }
   });
 
   test('addPlugins function', () => {
@@ -172,7 +169,7 @@ describe('a jenkins instance', () => {
 
     // WHEN
     const jenkins = new Jenkins(chart, 'my-jenkins');
-    jenkins.addPlugins(plugins);
+    jenkins.addPlugins(...plugins);
 
     // THEN
     const manifest = Testing.synth(chart);
@@ -197,7 +194,7 @@ describe('a jenkins instance', () => {
 
     // WHEN
     const jenkins = new Jenkins(chart, 'my-jenkins');
-    jenkins.addSeedJobs(seedJobs);
+    jenkins.addSeedJobs(...seedJobs);
 
     // THEN
     const manifest = Testing.synth(chart);
@@ -248,11 +245,12 @@ describe('a jenkins instance', () => {
     expect(manifest[0].metadata.namespace).toEqual(namespace);
     expect(manifest[0].metadata.labels).toEqual(labels);
     expect(manifest[0].spec.master.disableCSRFProtection).toEqual(disableCSRFProtection);
-    manifest[0].spec.master.basePlugins.forEach((plugin: JenkinsBasePlugins) => {
+
+    for (const plugin of manifest[0].spec.master.basePlugins) {
       if (plugin.name == basePlugins[0].name) {
         expect(plugin.version).toEqual(basePlugins[0].version);
       }
-    });
+    }
     expect(manifest[0].spec.master.plugins[0].name).toEqual(plugins[0].name);
     expect(manifest[0].spec.master.plugins[0].version).toEqual(plugins[0].version);
     expect(manifest[0].spec.seedJobs).toEqual(seedJobs);
@@ -276,10 +274,11 @@ describe('a jenkins instance', () => {
     const manifest = Testing.synth(chart);
 
     expect(manifest).toMatchSnapshot();
-    manifest[0].spec.master.basePlugins.forEach((plugin: JenkinsBasePlugins) => {
+
+    for (const plugin of manifest[0].spec.master.basePlugins) {
       if (plugin.name == basePlugins[0].name) {
         expect(plugin.version).toEqual(basePlugins[0].version);
       }
-    });
+    }
   });
 });

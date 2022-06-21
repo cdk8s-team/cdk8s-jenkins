@@ -1,94 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`a jenkins instance addBasePlugins function 1`] = `
-Array [
-  Object {
-    "apiVersion": "jenkins.io/v1alpha2",
-    "kind": "Jenkins",
-    "metadata": Object {
-      "labels": Object {
-        "app": "jenkins",
-      },
-      "name": "cdk8s-jenkins-construct",
-      "namespace": "default",
-    },
-    "spec": Object {
-      "configurationAsCode": Object {
-        "configurations": Array [],
-        "secret": Object {
-          "name": "",
-        },
-      },
-      "groovyScripts": Object {
-        "configurations": Array [],
-        "secret": Object {
-          "name": "",
-        },
-      },
-      "jenkinsAPISettings": Object {
-        "authorizationStrategy": "createUser",
-      },
-      "master": Object {
-        "basePlugins": Array [
-          Object {
-            "name": "kubernetes",
-            "version": "1.31.3",
-          },
-          Object {
-            "name": "workflow-job",
-            "version": "1145.v7f2433caa07f",
-          },
-          Object {
-            "name": "workflow-aggregator",
-            "version": "2.6",
-          },
-          Object {
-            "name": "git",
-            "version": "4.10.3",
-          },
-          Object {
-            "name": "job-dsl",
-            "version": "1.78.1",
-          },
-          Object {
-            "name": "configuration-as-code",
-            "version": "1414.v878271fc496f",
-          },
-          Object {
-            "name": "kubernetes-credentials-provider",
-            "version": "0.20",
-          },
-          Object {
-            "name": "workflow-api",
-            "version": "2.76",
-          },
-        ],
-        "containers": Array [
-          Object {
-            "image": "jenkins/jenkins:lts",
-            "imagePullPolicy": "Always",
-            "name": "jenkins-master",
-            "resources": Object {
-              "limits": Object {
-                "cpu": "2",
-                "memory": "3Gi",
-              },
-              "requests": Object {
-                "cpu": "1",
-                "memory": "500Mi",
-              },
-            },
-          },
-        ],
-        "disableCSRFProtection": false,
-        "plugins": Array [],
-      },
-      "seedJobs": Array [],
-    },
-  },
-]
-`;
-
 exports[`a jenkins instance addPlugins function 1`] = `
 Array [
   Object {
@@ -155,12 +66,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -245,12 +156,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -338,12 +249,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -423,12 +334,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -513,12 +424,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -611,12 +522,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -696,12 +607,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -781,12 +692,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -866,12 +777,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -951,12 +862,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
@@ -1036,12 +947,12 @@ Array [
             "name": "jenkins-master",
             "resources": Object {
               "limits": Object {
-                "cpu": "2",
+                "cpu": "1500m",
                 "memory": "3Gi",
               },
               "requests": Object {
                 "cpu": "1",
-                "memory": "500Mi",
+                "memory": "500M",
               },
             },
           },
