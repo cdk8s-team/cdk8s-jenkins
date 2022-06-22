@@ -46,6 +46,8 @@ const project = new cdk8s.ConstructLibraryCdk8s({
   },
 });
 
+project.addDevDeps('@types/jest@^27.5.1');
+
 new Cdk8sCommon(project);
 
 project.synth();
