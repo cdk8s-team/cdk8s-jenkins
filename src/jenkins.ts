@@ -118,11 +118,10 @@ export class Jenkins extends Construct {
   constructor(scope: Construct, id: string, props: JenkinsProps = {}) {
     super(scope, id);
 
-    this._basePlugins = [...DEFAULT_BASE_PLUGINS];
-    const basePluginsList = props.basePlugins ?? [];
-    this.addBasePlugins(...basePluginsList);
     this._plugins = props.plugins ?? [];
     this._seedJobs = props.seedJobs ?? [];
+    this._basePlugins = [...DEFAULT_BASE_PLUGINS];
+    this.addBasePlugins(...(props.basePlugins ?? []));
     const metadata = {
       namespace: props.metadata?.namespace ?? 'default',
       labels: props.metadata?.labels ?? { app: 'jenkins' },
@@ -148,7 +147,7 @@ export class Jenkins extends Construct {
       },
     ];;
 
-    const jenkinsCustomResource = new jenkins.Jenkins(this, 'JenkinsCustomResource', {
+    const jenkinsCustomResource = new jenkins.Jenkins(this, 'Default', {
       metadata: metadata,
       spec: {
         groovyScripts: {
