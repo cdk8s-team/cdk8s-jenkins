@@ -17,6 +17,7 @@ const project = new cdk8s.ConstructLibraryCdk8s({
   jestOptions: {
     jestConfig: {
       coveragePathIgnorePatterns: [
+        '/node_modules/',
         'src/imports/*',
       ],
     },

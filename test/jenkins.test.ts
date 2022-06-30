@@ -14,37 +14,25 @@ describe('a jenkins instance', () => {
     expect(Testing.synth(chart)).toMatchSnapshot();
   });
 
-  test('with namespace', () => {
+  test('with metadata', () => {
     // GIVEN
     const app = Testing.app();
     const chart = new Chart(app, 'test');
     const namespace = 'jenkins-test-namespace';
+    const labels = { customApp: 'my-jenkins' };
 
     // WHEN
     new Jenkins(chart, 'my-jenkins', {
-      namespace: namespace,
+      metadata: {
+        namespace: namespace,
+        labels: labels,
+      },
     });
 
     // THEN
     const manifest = Testing.synth(chart);
     expect(manifest).toMatchSnapshot();
     expect(manifest[0].metadata.namespace).toEqual(namespace);
-  });
-
-  test('with labels', () => {
-    // GIVEN
-    const app = Testing.app();
-    const chart = new Chart(app, 'test');
-    const labels = { customApp: 'my-jenkins' };
-
-    // WHEN
-    new Jenkins(chart, 'my-jenkins', {
-      labels: labels,
-    });
-
-    // THEN
-    const manifest = Testing.synth(chart);
-    expect(manifest).toMatchSnapshot();
     expect(manifest[0].metadata.labels).toEqual(labels);
   });
 
@@ -65,13 +53,42 @@ describe('a jenkins instance', () => {
     expect(manifest[0].spec.master.disableCSRFProtection).toEqual(disableCSRFProtection);
   });
 
-  test('with an update to a base plugin', () => {
+  test('with an update to a base plugin in constructor', () => {
     // GIVEN
     const app = Testing.app();
     const chart = new Chart(app, 'test');
     const basePlugins = [{
       name: 'configuration-as-code',
       version: '1.55',
+    }];
+
+    // WHEN
+    new Jenkins(chart, 'my-jenkins', {
+      basePlugins: basePlugins,
+    });
+
+    // THEN
+    const manifest = Testing.synth(chart);
+    expect(manifest).toMatchSnapshot();
+
+    for (const plugin of manifest[0].spec.master.basePlugins) {
+      if (plugin.name == basePlugins[0].name) {
+        expect(plugin.version).toEqual(basePlugins[0].version);
+      }
+    }
+  });
+
+  test('with an update and a new base plugin in constructor', () => {
+    // GIVEN
+    const app = Testing.app();
+    const chart = new Chart(app, 'test');
+    const basePlugins = [{
+      name: 'configuration-as-code',
+      version: '1.55',
+    },
+    {
+      name: 'a-new-base-plugin',
+      version: '0.01',
     }];
 
     // WHEN
@@ -140,8 +157,12 @@ describe('a jenkins instance', () => {
     const app = Testing.app();
     const chart = new Chart(app, 'test');
     const basePlugins = [{
-      name: 'workflow-api',
-      version: '2.76',
+      name: 'configuration-as-code',
+      version: '1.55',
+    },
+    {
+      name: 'a-new-base-plugin',
+      version: '0.01',
     }];
 
     // WHEN
@@ -230,8 +251,10 @@ describe('a jenkins instance', () => {
 
     // WHEN
     new Jenkins(chart, 'my-jenkins', {
-      namespace: namespace,
-      labels: labels,
+      metadata: {
+        namespace: namespace,
+        labels: labels,
+      },
       disableCsrfProtection: disableCSRFProtection,
       basePlugins: basePlugins,
       plugins: plugins,

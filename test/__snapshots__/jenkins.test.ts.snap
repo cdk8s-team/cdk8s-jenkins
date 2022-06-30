@@ -9,7 +9,7 @@ Array [
       "labels": Object {
         "app": "jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "default",
     },
     "spec": Object {
@@ -99,7 +99,7 @@ Array [
       "labels": Object {
         "app": "jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "default",
     },
     "spec": Object {
@@ -192,7 +192,7 @@ Array [
       "labels": Object {
         "app": "jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "default",
     },
     "spec": Object {
@@ -277,7 +277,7 @@ Array [
       "labels": Object {
         "app": "jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "default",
     },
     "spec": Object {
@@ -367,7 +367,7 @@ Array [
       "labels": Object {
         "customApp": "my-jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "jenkins-test-namespace",
     },
     "spec": Object {
@@ -409,12 +409,12 @@ Array [
             "version": "1.78.1",
           },
           Object {
-            "name": "configuration-as-code",
-            "version": "1.55",
-          },
-          Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
+          },
+          Object {
+            "name": "configuration-as-code",
+            "version": "1.55",
           },
         ],
         "containers": Array [
@@ -456,7 +456,7 @@ Array [
 ]
 `;
 
-exports[`a jenkins instance with an update to a base plugin 1`] = `
+exports[`a jenkins instance with an update and a new base plugin in constructor 1`] = `
 Array [
   Object {
     "apiVersion": "jenkins.io/v1alpha2",
@@ -465,7 +465,7 @@ Array [
       "labels": Object {
         "app": "jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "default",
     },
     "spec": Object {
@@ -507,12 +507,101 @@ Array [
             "version": "1.78.1",
           },
           Object {
+            "name": "kubernetes-credentials-provider",
+            "version": "0.20",
+          },
+          Object {
             "name": "configuration-as-code",
             "version": "1.55",
           },
           Object {
+            "name": "a-new-base-plugin",
+            "version": "0.01",
+          },
+        ],
+        "containers": Array [
+          Object {
+            "image": "jenkins/jenkins:lts",
+            "imagePullPolicy": "Always",
+            "name": "jenkins-master",
+            "resources": Object {
+              "limits": Object {
+                "cpu": "1500m",
+                "memory": "3Gi",
+              },
+              "requests": Object {
+                "cpu": "1",
+                "memory": "500M",
+              },
+            },
+          },
+        ],
+        "disableCSRFProtection": false,
+        "plugins": Array [],
+      },
+      "seedJobs": Array [],
+    },
+  },
+]
+`;
+
+exports[`a jenkins instance with an update to a base plugin in constructor 1`] = `
+Array [
+  Object {
+    "apiVersion": "jenkins.io/v1alpha2",
+    "kind": "Jenkins",
+    "metadata": Object {
+      "labels": Object {
+        "app": "jenkins",
+      },
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
+      "namespace": "default",
+    },
+    "spec": Object {
+      "configurationAsCode": Object {
+        "configurations": Array [],
+        "secret": Object {
+          "name": "",
+        },
+      },
+      "groovyScripts": Object {
+        "configurations": Array [],
+        "secret": Object {
+          "name": "",
+        },
+      },
+      "jenkinsAPISettings": Object {
+        "authorizationStrategy": "createUser",
+      },
+      "master": Object {
+        "basePlugins": Array [
+          Object {
+            "name": "kubernetes",
+            "version": "1.31.3",
+          },
+          Object {
+            "name": "workflow-job",
+            "version": "1145.v7f2433caa07f",
+          },
+          Object {
+            "name": "workflow-aggregator",
+            "version": "2.6",
+          },
+          Object {
+            "name": "git",
+            "version": "4.10.3",
+          },
+          Object {
+            "name": "job-dsl",
+            "version": "1.78.1",
+          },
+          Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
+          },
+          Object {
+            "name": "configuration-as-code",
+            "version": "1.55",
           },
         ],
         "containers": Array [
@@ -550,7 +639,7 @@ Array [
       "labels": Object {
         "app": "jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "default",
     },
     "spec": Object {
@@ -635,7 +724,7 @@ Array [
       "labels": Object {
         "app": "jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "default",
     },
     "spec": Object {
@@ -711,7 +800,7 @@ Array [
 ]
 `;
 
-exports[`a jenkins instance with labels 1`] = `
+exports[`a jenkins instance with metadata 1`] = `
 Array [
   Object {
     "apiVersion": "jenkins.io/v1alpha2",
@@ -720,92 +809,7 @@ Array [
       "labels": Object {
         "customApp": "my-jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
-      "namespace": "default",
-    },
-    "spec": Object {
-      "configurationAsCode": Object {
-        "configurations": Array [],
-        "secret": Object {
-          "name": "",
-        },
-      },
-      "groovyScripts": Object {
-        "configurations": Array [],
-        "secret": Object {
-          "name": "",
-        },
-      },
-      "jenkinsAPISettings": Object {
-        "authorizationStrategy": "createUser",
-      },
-      "master": Object {
-        "basePlugins": Array [
-          Object {
-            "name": "kubernetes",
-            "version": "1.31.3",
-          },
-          Object {
-            "name": "workflow-job",
-            "version": "1145.v7f2433caa07f",
-          },
-          Object {
-            "name": "workflow-aggregator",
-            "version": "2.6",
-          },
-          Object {
-            "name": "git",
-            "version": "4.10.3",
-          },
-          Object {
-            "name": "job-dsl",
-            "version": "1.78.1",
-          },
-          Object {
-            "name": "configuration-as-code",
-            "version": "1414.v878271fc496f",
-          },
-          Object {
-            "name": "kubernetes-credentials-provider",
-            "version": "0.20",
-          },
-        ],
-        "containers": Array [
-          Object {
-            "image": "jenkins/jenkins:lts",
-            "imagePullPolicy": "Always",
-            "name": "jenkins-master",
-            "resources": Object {
-              "limits": Object {
-                "cpu": "1500m",
-                "memory": "3Gi",
-              },
-              "requests": Object {
-                "cpu": "1",
-                "memory": "500M",
-              },
-            },
-          },
-        ],
-        "disableCSRFProtection": false,
-        "plugins": Array [],
-      },
-      "seedJobs": Array [],
-    },
-  },
-]
-`;
-
-exports[`a jenkins instance with namespace 1`] = `
-Array [
-  Object {
-    "apiVersion": "jenkins.io/v1alpha2",
-    "kind": "Jenkins",
-    "metadata": Object {
-      "labels": Object {
-        "app": "jenkins",
-      },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "jenkins-test-namespace",
     },
     "spec": Object {
@@ -890,7 +894,7 @@ Array [
       "labels": Object {
         "app": "jenkins",
       },
-      "name": "cdk8s-jenkins-construct",
+      "name": "test-my-jenkins-jenkinscustomresource-c8969e98",
       "namespace": "default",
     },
     "spec": Object {
