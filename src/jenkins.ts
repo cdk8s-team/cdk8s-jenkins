@@ -124,6 +124,7 @@ export class Jenkins extends Construct {
     this._basePlugins = [...DEFAULT_BASE_PLUGINS];
     this.addBasePlugins(...(props.basePlugins ?? []));
     const metadata = {
+      ...props.metadata,
       namespace: props.metadata?.namespace ?? 'default',
       labels: props.metadata?.labels ?? { app: 'jenkins' },
     };
