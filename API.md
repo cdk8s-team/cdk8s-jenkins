@@ -300,10 +300,11 @@ public readonly downloadUrl: string;
 ```
 
 - *Type:* string
+- *Default:* Plugins are downloaded from Jenkins Update Centers.
 
 The url from where plugin has to be downloaded.
 
-By default the plugins are downloaded from Jenkins Update Centers. For more information, take a look { @link https://github.com/jenkinsci/kubernetes-operator/blob/master/pkg/configuration/base/resources/scripts_configmap.go#L121-L124 here }.
+> [https://github.com/jenkinsci/kubernetes-operator/blob/master/pkg/configuration/base/resources/scripts_configmap.go#L121-L124](https://github.com/jenkinsci/kubernetes-operator/blob/master/pkg/configuration/base/resources/scripts_configmap.go#L121-L124)
 
 ---
 

@@ -9,7 +9,7 @@ import { DEFAULT_BASE_PLUGINS } from './utils/constants';
 export interface Plugin {
   /**
    * The url from where plugin has to be downloaded.
-   * @default - Plugins are downloaded from Jenkins Update Centers. 
+   * @default - Plugins are downloaded from Jenkins Update Centers.
    * @see https://github.com/jenkinsci/kubernetes-operator/blob/master/pkg/configuration/base/resources/scripts_configmap.go#L121-L124
    */
   readonly downloadUrl?: string;
