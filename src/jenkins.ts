@@ -103,7 +103,7 @@ export interface JenkinsProps {
    * List of seed job configuration for Jenkins resource.
    * For more information about seed jobs, please take a look at { @link https://github.com/jenkinsci/job-dsl-plugin/wiki/Tutorial---Using-the-Jenkins-Job-DSL Jenkins Seed Jobs Documentation }.
    *
-   * @default = []
+   * @default - No seed jobs
    */
   readonly seedJobs?: SeedJob[];
 }
