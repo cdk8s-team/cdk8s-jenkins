@@ -239,7 +239,7 @@ public readonly seedJobs: SeedJob[];
 ```
 
 - *Type:* <a href="#cdk8s-jenkins.SeedJob">SeedJob</a>[]
-- *Default:* = []
+- *Default:* No seed jobs
 
 List of seed job configuration for Jenkins resource.
 
