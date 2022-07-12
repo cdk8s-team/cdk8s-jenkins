@@ -121,7 +121,7 @@ export class Jenkins extends Construct {
 
     this._plugins = props.plugins ?? [];
     this._seedJobs = props.seedJobs ?? [];
-    this._basePlugins = [...DEFAULT_BASE_PLUGINS];
+    this._basePlugins = [];
     this.addBasePlugins(...(props.basePlugins ?? []));
     const metadata = {
       ...props.metadata,
@@ -170,10 +170,22 @@ export class Jenkins extends Construct {
         master: {
           disableCsrfProtection: disableCSRFProtection,
           containers: containers,
-          basePlugins: this._basePlugins,
-          plugins: this._plugins,
+          basePlugins: cdk8s.Lazy.any({
+            produce: () => {
+              return this._basePlugins;
+            },
+          }),
+          plugins: cdk8s.Lazy.any({
+            produce: () => {
+              return this._plugins;
+            },
+          }),
         },
-        seedJobs: this._seedJobs,
+        seedJobs: cdk8s.Lazy.any({
+          produce: () => {
+            return this._seedJobs;
+          },
+        }),
       },
     });
 
@@ -185,31 +197,20 @@ export class Jenkins extends Construct {
    * @param basePlugins List of base plugins.
    */
   public addBasePlugins(...basePlugins: Plugin[]): void {
-    const inputBasePlugins = [...basePlugins];
-    const existingPlugins = [...this._basePlugins];
+    this._basePlugins.splice(0);
 
-    for (const basePlugin of inputBasePlugins) {
-      for (const existingPlugin of existingPlugins) {
-        if (existingPlugin.name == basePlugin.name && existingPlugin.version != basePlugin.version) {
-          const indexOfExistingPlugin = this._basePlugins.findIndex((plugin) => {
-            return plugin.name == existingPlugin.name;
-          });
-          this._basePlugins.splice(indexOfExistingPlugin, 1);
-          const updatedPlugin = {
-            name: basePlugin.name,
-            version: basePlugin.version,
-          };
-          this._basePlugins.push(updatedPlugin);
-
-          const indexOfInputPlugin = basePlugins.findIndex((plugin) => {
-            return plugin.name == basePlugin.name;
-          });
-          basePlugins.splice(indexOfInputPlugin, 1);
-        }
-      }
+    for (const basePlugin of basePlugins) {
+      DEFAULT_BASE_PLUGINS.set(basePlugin.name, basePlugin.version);
     }
 
-    this._basePlugins.push(...basePlugins);
+    const basePluginList = Array.from(DEFAULT_BASE_PLUGINS, ([key, value]) => {
+      return {
+        name: key,
+        version: value,
+      };
+    });
+
+    this._basePlugins.push(...basePluginList);
   }
 
   /**
