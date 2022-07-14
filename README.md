@@ -29,11 +29,13 @@ const jenkins = new Jenkins(this, 'my-jenkins');
 ```
 
 The library also enables configuring the following parmeters for the Jenkins instance:
-### namespace and labels
+### metadata
 ```ts
 const jenkins = new Jenkins(this, 'my-jenkins', {
-  namespace: 'jenkins-namespace',
-  labels: { customApp: 'my-jenkins' },
+  metadata: {
+    namespace: 'jenkins-namespace',
+    labels: { customApp: 'my-jenkins' },
+  },
 });
 ```
 ### disableCsrfProtection
@@ -74,7 +76,6 @@ const jenkins = new Jenkins(this, 'my-jenkins', {
     }],
 });
 ```
-
 You can also utilize `addPlugins` function to add plugins to jenkins configuration after initialization.
 ```ts
 const jenkins = new Jenkins(this, 'my-jenkins');
@@ -98,7 +99,6 @@ const jenkins = new Jenkins(this, 'my-jenkins', {
     }],
 });
 ```
-
 You can also utilize `addSeedJobs` function to add seed jobs to jenkins configuration after initialization.
 ```ts
 const jenkins = new Jenkins(this, 'my-jenkins');
