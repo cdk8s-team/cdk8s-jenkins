@@ -402,6 +402,91 @@ describe('a jenkins instance', () => {
     expect(manifest[0].spec.seedJobs[0]).toEqual(seedJobs[0]);
   });
 
+  test('with two jenkins instances with separate configurations', () => {
+    // GIVEN
+    const app = Testing.app();
+    const chart = new Chart(app, 'test');
+
+    // Seed Jobs Example: https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/deploying-jenkins/
+    const seedJobs = [{
+      id: 'jenkins-operator',
+      targets: 'cicd/jobs/*.jenkins',
+      description: 'Jenkins Operator repository',
+      repositoryBranch: 'master',
+      repositoryUrl: 'https://github.com/jenkinsci/kubernetes-operator.git',
+    }];
+
+    // WHEN
+    new Jenkins(chart, 'instance-1', {
+      metadata: {
+        namespace: 'jenkins-instance-1',
+        labels: { customApp: 'instance-1' },
+      },
+      disableCsrfProtection: true,
+      basePlugins: [{
+        name: 'configuration-as-code',
+        version: '1.55',
+      }],
+      plugins: [{
+        name: 'simple-theme-plugin',
+        version: '0.7',
+      }],
+      seedJobs: seedJobs,
+    });
+
+    new Jenkins(chart, 'instance-2', {
+      metadata: {
+        namespace: 'jenkins-instance-2',
+        labels: { customApp: 'instance-2' },
+        annotations: { annotations: 'example-2' },
+      },
+      disableCsrfProtection: false,
+      basePlugins: [{
+        name: 'kubernetes',
+        version: '2.14',
+      }, {
+        name: 'new-base-plugin',
+        version: '0.01',
+      }],
+    });
+
+    // THEN
+    const manifest = Testing.synth(chart);
+
+    expect(manifest).toMatchSnapshot();
+
+    // Validating first jenkins instance
+    expect(manifest[0].metadata.namespace).toEqual('jenkins-instance-1');
+    expect(manifest[0].metadata.labels).toEqual({ customApp: 'instance-1' });
+    expect(manifest[0].spec.master.disableCSRFProtection).toEqual(true);
+
+    for (const plugin of manifest[0].spec.master.basePlugins) {
+      if (plugin.name == 'configuration-as-code') {
+        expect(plugin.version).toEqual('1.55');
+      }
+    }
+    expect(manifest[0].spec.master.plugins[0].name).toEqual('simple-theme-plugin');
+    expect(manifest[0].spec.master.plugins[0].version).toEqual('0.7');
+    expect(manifest[0].spec.seedJobs[0]).toEqual(seedJobs[0]);
+
+    // Validating second jenkins instance
+    expect(manifest[1].metadata.namespace).toEqual('jenkins-instance-2');
+    expect(manifest[1].metadata.labels).toEqual({ customApp: 'instance-2' });
+    expect(manifest[1].metadata.annotations).toEqual({ annotations: 'example-2' });
+    expect(manifest[1].spec.master.disableCSRFProtection).toEqual(false);
+
+    for (const plugin of manifest[1].spec.master.basePlugins) {
+      if (plugin.name == 'kubernetes') {
+        expect(plugin.version).toEqual('2.14');
+      } else if (plugin.name == 'new-base-plugin') {
+        expect(plugin.version).toEqual('0.01');
+      }
+    }
+    expect(manifest[1].spec.master.plugins).toEqual([]);
+    expect(manifest[1].spec.seedJobs).toEqual([]);
+  });
+
+
   test(('modify base plugin version using escape hatches'), () => {
     // GIVEN
     const app = Testing.app();

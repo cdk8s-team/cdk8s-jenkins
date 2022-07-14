@@ -32,7 +32,7 @@ Array [
         "basePlugins": Array [
           Object {
             "name": "kubernetes",
-            "version": "2.42",
+            "version": "1.31.3",
           },
           Object {
             "name": "workflow-job",
@@ -52,19 +52,11 @@ Array [
           },
           Object {
             "name": "configuration-as-code",
-            "version": "1.55",
+            "version": "1414.v878271fc496f",
           },
           Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
-          },
-          Object {
-            "name": "a-new-base-plugin",
-            "version": "0.01",
-          },
-          Object {
-            "name": "another-new-base-plugin",
-            "version": "0.011",
           },
         ],
         "containers": Array [
@@ -130,7 +122,7 @@ Array [
         "basePlugins": Array [
           Object {
             "name": "kubernetes",
-            "version": "2.42",
+            "version": "1.31.3",
           },
           Object {
             "name": "workflow-job",
@@ -150,19 +142,11 @@ Array [
           },
           Object {
             "name": "configuration-as-code",
-            "version": "1.55",
+            "version": "1414.v878271fc496f",
           },
           Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
-          },
-          Object {
-            "name": "a-new-base-plugin",
-            "version": "0.01",
-          },
-          Object {
-            "name": "another-new-base-plugin",
-            "version": "0.011",
           },
         ],
         "containers": Array [
@@ -231,7 +215,7 @@ Array [
         "basePlugins": Array [
           Object {
             "name": "kubernetes",
-            "version": "2.42",
+            "version": "1.31.3",
           },
           Object {
             "name": "workflow-job",
@@ -251,19 +235,11 @@ Array [
           },
           Object {
             "name": "configuration-as-code",
-            "version": "1.55",
+            "version": "1414.v878271fc496f",
           },
           Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
-          },
-          Object {
-            "name": "a-new-base-plugin",
-            "version": "0.01",
-          },
-          Object {
-            "name": "another-new-base-plugin",
-            "version": "0.011",
           },
         ],
         "containers": Array [
@@ -324,7 +300,7 @@ Array [
         "basePlugins": Array [
           Object {
             "name": "kubernetes",
-            "version": "2.42",
+            "version": "1.31.3",
           },
           Object {
             "name": "workflow-job",
@@ -344,19 +320,11 @@ Array [
           },
           Object {
             "name": "configuration-as-code",
-            "version": "1.55",
+            "version": "1414.v878271fc496f",
           },
           Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
-          },
-          Object {
-            "name": "a-new-base-plugin",
-            "version": "0.01",
-          },
-          Object {
-            "name": "another-new-base-plugin",
-            "version": "0.011",
           },
         ],
         "containers": Array [
@@ -422,7 +390,7 @@ Array [
         "basePlugins": Array [
           Object {
             "name": "kubernetes",
-            "version": "2.42",
+            "version": "1.31.3",
           },
           Object {
             "name": "workflow-job",
@@ -442,19 +410,11 @@ Array [
           },
           Object {
             "name": "configuration-as-code",
-            "version": "1.55",
+            "version": "1414.v878271fc496f",
           },
           Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
-          },
-          Object {
-            "name": "a-new-base-plugin",
-            "version": "0.01",
-          },
-          Object {
-            "name": "another-new-base-plugin",
-            "version": "0.011",
           },
         ],
         "containers": Array [
@@ -524,7 +484,7 @@ Array [
         "basePlugins": Array [
           Object {
             "name": "kubernetes",
-            "version": "2.42",
+            "version": "1.31.3",
           },
           Object {
             "name": "workflow-job",
@@ -549,14 +509,6 @@ Array [
           Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
-          },
-          Object {
-            "name": "a-new-base-plugin",
-            "version": "0.01",
-          },
-          Object {
-            "name": "another-new-base-plugin",
-            "version": "0.011",
           },
         ],
         "containers": Array [
@@ -1155,7 +1107,7 @@ Array [
         "basePlugins": Array [
           Object {
             "name": "kubernetes",
-            "version": "2.42",
+            "version": "1.31.3",
           },
           Object {
             "name": "workflow-job",
@@ -1175,19 +1127,11 @@ Array [
           },
           Object {
             "name": "configuration-as-code",
-            "version": "1.55",
+            "version": "1414.v878271fc496f",
           },
           Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
-          },
-          Object {
-            "name": "a-new-base-plugin",
-            "version": "0.01",
-          },
-          Object {
-            "name": "another-new-base-plugin",
-            "version": "0.011",
           },
         ],
         "containers": Array [
@@ -1256,7 +1200,7 @@ Array [
         "basePlugins": Array [
           Object {
             "name": "kubernetes",
-            "version": "2.42",
+            "version": "1.31.3",
           },
           Object {
             "name": "workflow-job",
@@ -1276,19 +1220,11 @@ Array [
           },
           Object {
             "name": "configuration-as-code",
-            "version": "1.55",
+            "version": "1414.v878271fc496f",
           },
           Object {
             "name": "kubernetes-credentials-provider",
             "version": "0.20",
-          },
-          Object {
-            "name": "a-new-base-plugin",
-            "version": "0.01",
-          },
-          Object {
-            "name": "another-new-base-plugin",
-            "version": "0.011",
           },
         ],
         "containers": Array [
@@ -1327,6 +1263,191 @@ Array [
           "targets": "cicd/jobs/*.jenkins",
         },
       ],
+    },
+  },
+]
+`;
+
+exports[`a jenkins instance with two jenkins instances with separate configurations 1`] = `
+Array [
+  Object {
+    "apiVersion": "jenkins.io/v1alpha2",
+    "kind": "Jenkins",
+    "metadata": Object {
+      "labels": Object {
+        "customApp": "instance-1",
+      },
+      "name": "test-instance-1-c89e2f36",
+      "namespace": "jenkins-instance-1",
+    },
+    "spec": Object {
+      "configurationAsCode": Object {
+        "configurations": Array [],
+        "secret": Object {
+          "name": "",
+        },
+      },
+      "groovyScripts": Object {
+        "configurations": Array [],
+        "secret": Object {
+          "name": "",
+        },
+      },
+      "jenkinsAPISettings": Object {
+        "authorizationStrategy": "createUser",
+      },
+      "master": Object {
+        "basePlugins": Array [
+          Object {
+            "name": "kubernetes",
+            "version": "1.31.3",
+          },
+          Object {
+            "name": "workflow-job",
+            "version": "1145.v7f2433caa07f",
+          },
+          Object {
+            "name": "workflow-aggregator",
+            "version": "2.6",
+          },
+          Object {
+            "name": "git",
+            "version": "4.10.3",
+          },
+          Object {
+            "name": "job-dsl",
+            "version": "1.78.1",
+          },
+          Object {
+            "name": "configuration-as-code",
+            "version": "1.55",
+          },
+          Object {
+            "name": "kubernetes-credentials-provider",
+            "version": "0.20",
+          },
+        ],
+        "containers": Array [
+          Object {
+            "image": "jenkins/jenkins:lts",
+            "imagePullPolicy": "Always",
+            "name": "jenkins-master",
+            "resources": Object {
+              "limits": Object {
+                "cpu": "1500m",
+                "memory": "3Gi",
+              },
+              "requests": Object {
+                "cpu": "1",
+                "memory": "500M",
+              },
+            },
+          },
+        ],
+        "disableCSRFProtection": true,
+        "plugins": Array [
+          Object {
+            "name": "simple-theme-plugin",
+            "version": "0.7",
+          },
+        ],
+      },
+      "seedJobs": Array [
+        Object {
+          "description": "Jenkins Operator repository",
+          "id": "jenkins-operator",
+          "repositoryBranch": "master",
+          "repositoryUrl": "https://github.com/jenkinsci/kubernetes-operator.git",
+          "targets": "cicd/jobs/*.jenkins",
+        },
+      ],
+    },
+  },
+  Object {
+    "apiVersion": "jenkins.io/v1alpha2",
+    "kind": "Jenkins",
+    "metadata": Object {
+      "annotations": Object {
+        "annotations": "example-2",
+      },
+      "labels": Object {
+        "customApp": "instance-2",
+      },
+      "name": "test-instance-2-c8ccfe00",
+      "namespace": "jenkins-instance-2",
+    },
+    "spec": Object {
+      "configurationAsCode": Object {
+        "configurations": Array [],
+        "secret": Object {
+          "name": "",
+        },
+      },
+      "groovyScripts": Object {
+        "configurations": Array [],
+        "secret": Object {
+          "name": "",
+        },
+      },
+      "jenkinsAPISettings": Object {
+        "authorizationStrategy": "createUser",
+      },
+      "master": Object {
+        "basePlugins": Array [
+          Object {
+            "name": "kubernetes",
+            "version": "2.14",
+          },
+          Object {
+            "name": "workflow-job",
+            "version": "1145.v7f2433caa07f",
+          },
+          Object {
+            "name": "workflow-aggregator",
+            "version": "2.6",
+          },
+          Object {
+            "name": "git",
+            "version": "4.10.3",
+          },
+          Object {
+            "name": "job-dsl",
+            "version": "1.78.1",
+          },
+          Object {
+            "name": "configuration-as-code",
+            "version": "1414.v878271fc496f",
+          },
+          Object {
+            "name": "kubernetes-credentials-provider",
+            "version": "0.20",
+          },
+          Object {
+            "name": "new-base-plugin",
+            "version": "0.01",
+          },
+        ],
+        "containers": Array [
+          Object {
+            "image": "jenkins/jenkins:lts",
+            "imagePullPolicy": "Always",
+            "name": "jenkins-master",
+            "resources": Object {
+              "limits": Object {
+                "cpu": "1500m",
+                "memory": "3Gi",
+              },
+              "requests": Object {
+                "cpu": "1",
+                "memory": "500M",
+              },
+            },
+          },
+        ],
+        "disableCSRFProtection": false,
+        "plugins": Array [],
+      },
+      "seedJobs": Array [],
     },
   },
 ]

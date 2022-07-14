@@ -1,7 +1,6 @@
 import * as cdk8s from 'cdk8s';
 import { Construct } from 'constructs';
 import * as jenkins from './imports/jenkins.io';
-import { DEFAULT_BASE_PLUGINS } from './utils/constants';
 
 /**
  * Jenkins plugin.
@@ -113,7 +112,7 @@ export interface JenkinsProps {
  */
 export class Jenkins extends Construct {
   private _plugins: Plugin[];
-  private _basePlugins: Plugin[];
+  private _basePlugins: Map<string, string>;
   private _seedJobs: SeedJob[];
 
   constructor(scope: Construct, id: string, props: JenkinsProps = {}) {
@@ -121,7 +120,15 @@ export class Jenkins extends Construct {
 
     this._plugins = props.plugins ?? [];
     this._seedJobs = props.seedJobs ?? [];
-    this._basePlugins = [];
+    this._basePlugins = new Map<string, string>([
+      ['kubernetes', '1.31.3'],
+      ['workflow-job', '1145.v7f2433caa07f'],
+      ['workflow-aggregator', '2.6'],
+      ['git', '4.10.3'],
+      ['job-dsl', '1.78.1'],
+      ['configuration-as-code', '1414.v878271fc496f'],
+      ['kubernetes-credentials-provider', '0.20'],
+    ]);
     this.addBasePlugins(...(props.basePlugins ?? []));
     const metadata = {
       ...props.metadata,
@@ -172,7 +179,12 @@ export class Jenkins extends Construct {
           containers: containers,
           basePlugins: cdk8s.Lazy.any({
             produce: () => {
-              return this._basePlugins;
+              return Array.from(this._basePlugins, ([key, value]) => {
+                return {
+                  name: key,
+                  version: value,
+                };
+              });
             },
           }),
           plugins: cdk8s.Lazy.any({
@@ -197,20 +209,9 @@ export class Jenkins extends Construct {
    * @param basePlugins List of base plugins.
    */
   public addBasePlugins(...basePlugins: Plugin[]): void {
-    this._basePlugins.splice(0);
-
     for (const basePlugin of basePlugins) {
-      DEFAULT_BASE_PLUGINS.set(basePlugin.name, basePlugin.version);
+      this._basePlugins.set(basePlugin.name, basePlugin.version);
     }
-
-    const basePluginList = Array.from(DEFAULT_BASE_PLUGINS, ([key, value]) => {
-      return {
-        name: key,
-        version: value,
-      };
-    });
-
-    this._basePlugins.push(...basePluginList);
   }
 
   /**
