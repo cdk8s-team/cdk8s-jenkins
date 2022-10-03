@@ -290,10 +290,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdk8s/projen-common@^0.0.104":
-  version "0.0.104"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.104.tgz#b1c7dce43d40f9f042c6751314404710a3435810"
-  integrity sha512-GDtokZhmfsv/yPsGFpWh2pzh136lc6x50O6HQQ0Q/UX8UDdRSTBOqjqYkB/oNGFAZha8kH20dMNRvaIGKcQD4w==
+"@cdk8s/projen-common@^0.0.105":
+  version "0.0.105"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.105.tgz#19021411a47614536d0dff20f8283fa7e610a6b7"
+  integrity sha512-QGWG3bCKEkqNrgAmq8UyuE4/NOcRZz0lmPSZOV7XeJxiMLhW/xYzkWY8FH3Vl2uLexYMCVC8o4iEzmBTJGG8GQ==
 
 "@eslint/eslintrc@^1.3.2":
   version "1.3.2"
@@ -870,9 +870,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*":
-  version "18.7.23"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.23.tgz#75c580983846181ebe5f4abc40fe9dfb2d65665f"
-  integrity sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==
+  version "18.8.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.8.0.tgz#b8ee8d83a99470c0661bd899417fcd77060682fe"
+  integrity sha512-u+h43R6U8xXDt2vzUaVP3VwjjLyOJk6uEciZS8OSyziUQGOwmk+l+4drxcsDboHXwyTaqS1INebghmWMRxq3LA==
 
 "@types/node@^14":
   version "14.18.31"
@@ -3818,10 +3818,10 @@ jsii-diff@^1.69.0:
     log4js "^6.6.1"
     yargs "^16.2.0"
 
-jsii-docgen@^7.0.100:
-  version "7.0.100"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.100.tgz#56e94996841e7841efb6b46b7ba58531028b943b"
-  integrity sha512-2JFc2vy3M8QoK61MnBXnIFNKt2miRnUdBY5Mm3hJI9MFyhXW2ZvepMo/g8MbIzWFj7U8C3kuWkHQsCc7JEluSA==
+jsii-docgen@^7.0.101:
+  version "7.0.101"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.101.tgz#dcc70dc136fa6dffb23c04b61580ba953d04d45e"
+  integrity sha512-/C4o+CyFt560bXWCms0nTVuxdgFJbEfpUoCAs71ueUXEu5D20wJ8hddltpuleEx2jRdO6/XUUEjDZ6Y4PcQbPg==
   dependencies:
     "@jsii/spec" "^1.69.0"
     case "^1.6.3"
@@ -4906,10 +4906,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.63.1:
-  version "0.63.1"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.63.1.tgz#b0bc0dfe7ee7f1016b02d90921bf5e563447ff85"
-  integrity sha512-srGY1AV+9dHpr30k4350ajIrWUjP1dwTvR+Bt++6/4joGB48Lqzuwhsflzz/IIltMYFB30ltkHMD5KXiBNGMcg==
+projen@^0.63.3:
+  version "0.63.3"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.63.3.tgz#1fbf2de3960737325846be75b46e7581b406c463"
+  integrity sha512-/L7gz+U+SzaCfj2nNUmg/SPxQZBNOZivPc1ZZEtZThwoNIWj64YfauEgMlHPqS1R9mzbPB0MrrmAE8n24VYuBQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -5386,9 +5386,9 @@ socks-proxy-agent@^7.0.0:
     socks "^2.6.2"
 
 socks@^2.6.2:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/socks/-/socks-2.7.0.tgz#f9225acdb841e874dca25f870e9130990f3913d0"
-  integrity sha512-scnOe9y4VuiNUULJN72GrM26BNOjVsfPXI+j+98PkyEfsIXroa5ofyjT+FzGvn/xHs73U2JtoBYAVx9Hl4quSA==
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/socks/-/socks-2.7.1.tgz#d8e651247178fde79c0663043e07240196857d55"
+  integrity sha512-7maUZy1N7uo6+WVEX6psASxtNlKaNVMlGQKkG/63nEDdLOWNbiUMoLK7X4uYoLhQstau72mLgfEWcXcwsaHbYQ==
   dependencies:
     ip "^2.0.0"
     smart-buffer "^4.2.0"
@@ -6213,9 +6213,9 @@ yaml@2.0.0-7:
   integrity sha512-RbI2Tm3hl9AoHY4wWyWvGvJfFIbHOzuzaxum6ez1A0vve+uXgNor03Wys4t+2sgjJSVSe+B2xerd1/dnvqHlOA==
 
 yaml@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.1.1.tgz#1e06fb4ca46e60d9da07e4f786ea370ed3c3cfec"
-  integrity sha512-o96x3OPo8GjWeSLF+wOAbrPfhFOGY0W00GNaxCDv+9hkcDJEnev1yh8S7pgHF0ik6zc8sQLuL8hjHjJULZp8bw==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.1.2.tgz#eb0f535eb309811b60276a9cc8c02af4355db420"
+  integrity sha512-VSdf2/K3FqAetooKQv45Hcu6sA00aDgWZeGcG6V9IYJnVLTnb6988Tie79K5nx2vK7cEpf+yW8Oy+7iPAbdiHA==
 
 yargs-parser@20.x, yargs-parser@^20.2.2, yargs-parser@^20.2.3:
   version "20.2.9"
