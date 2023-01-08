@@ -291,10 +291,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdk8s/projen-common@^0.0.200":
-  version "0.0.200"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.200.tgz#f63f83b025001ceafdf8796619c6387d0b0a3357"
-  integrity sha512-XCclFza61Ka7Ls/GvDsXkr3RCn+/o59sdWe1y43pkgUA6swCpJ9B7fviUi+GWR8QMslkYANuCVb252yp+biVZw==
+"@cdk8s/projen-common@^0.0.201":
+  version "0.0.201"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.201.tgz#384b9a1af322b6a108647c8ddf6054f26cd807e3"
+  integrity sha512-niaDQPgHqWImb8xu0mXUyNl2pGU6Q46enkEqtDynFwaZMaezaHQ3u0ktpVH86g7gadeWG2VSWPQ65N6ngI+NlA==
 
 "@eslint/eslintrc@^1.4.1":
   version "1.4.1"
@@ -1611,9 +1611,9 @@ combined-stream@^1.0.8:
     delayed-stream "~1.0.0"
 
 commander@^9.4.1:
-  version "9.4.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.1.tgz#d1dd8f2ce6faf93147295c0df13c7c21141cfbdd"
-  integrity sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==
+  version "9.5.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-9.5.0.tgz#bc08d1eb5cedf7ccb797a96199d41c7bc3e60d30"
+  integrity sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==
 
 comment-json@4.2.2:
   version "4.2.2"
@@ -3907,10 +3907,10 @@ jsii-diff@^1.73.0:
     log4js "^6.7.1"
     yargs "^16.2.0"
 
-jsii-docgen@^7.0.196:
-  version "7.0.196"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.196.tgz#a3057473e9d836086f722f6c46b3d42dcdf18d57"
-  integrity sha512-ps6oEiDhFe16N2JQI2e0D+K1sK6k5Kz6kopQK3IGD/vdNA2jOdH6dO0mx4ewWTH05ReNBl5Hgmpwc8Z5AWWRpQ==
+jsii-docgen@^7.0.197:
+  version "7.0.197"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.197.tgz#b6ebd2184c7f438ba10d0ad7ff22acfaacd22f85"
+  integrity sha512-VSep4dFQvAf2FJqugYmYbUJahbtLR2c9U3ZE4B9mVFaTQGxQ2AoeMP0WTIr9uI9tpRm8I0psSZmtQUzAnm8HgA==
   dependencies:
     "@jsii/spec" "^1.73.0"
     case "^1.6.3"
