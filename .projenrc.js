@@ -5,6 +5,7 @@ const project = new Cdk8sTeamJsiiProject({
   name: 'cdk8s-jenkins',
   description: 'Jenkins construct for CDK8s',
   defaultReleaseBranch: 'main',
+  golang: false,
   devDeps: [
     '@cdk8s/projen-common',
     '@types/jest@^27.5.1',
