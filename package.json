@@ -34,17 +34,18 @@
   },
   "author": {
     "name": "Amazon Web Services",
+    "email": "https://aws.amazon.com",
     "url": "https://aws.amazon.com",
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.237",
-    "@types/jest": "^27.5.1",
+    "@cdk8s/projen-common": "^0.0.241",
+    "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "cdk8s": "2.3.16",
-    "constructs": "10.0.0",
+    "cdk8s": "2.6.49",
+    "constructs": "10.1.250",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -53,21 +54,21 @@
     "jest-junit": "^13",
     "jsii": "^1.74.0",
     "jsii-diff": "^1.74.0",
-    "jsii-docgen": "^7.0.231",
+    "jsii-docgen": "^7.0.233",
     "jsii-pacmak": "^1.74.0",
     "npm-check-updates": "^16",
-    "projen": "^0.67.50",
+    "projen": "^0.67.52",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "cdk8s": "^2.3.16",
-    "constructs": "^10.0.0"
+    "cdk8s": "^2.6.49",
+    "constructs": "^10.1.250"
   },
-  "keywords": [
-    "cdk"
-  ],
+  "engines": {
+    "node": ">= 14.17.0"
+  },
   "main": "lib/index.js",
   "license": "Apache-2.0",
   "version": "0.0.0",
