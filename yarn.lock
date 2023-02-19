@@ -291,10 +291,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdk8s/projen-common@^0.0.247":
-  version "0.0.247"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.247.tgz#97ffaaea1248392329a16bd8a54c008b05854e68"
-  integrity sha512-LU8bHtn5gv9xpm+mwFjWr/RhEiHbHA70ZPkO3f/7zn5a/NX7hoeAFEKr2pHlWpFmBMvh91PWxVKuvQj1rO8rqw==
+"@cdk8s/projen-common@^0.0.248":
+  version "0.0.248"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.248.tgz#50420f762f3367ef6f60a8cc5429d0ff46c728d0"
+  integrity sha512-VyFBlqQNyXf6RC24Po254njXtnrbrmdcOPvsXgkWbRBqf61fdx4iWJoS9gXhL/HRj22qdkb9FIMq9RvPj+uTmg==
   dependencies:
     codemaker "^1.75.0"
 
@@ -1481,10 +1481,10 @@ case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s@2.7.3:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.7.3.tgz#b60c2d76a03bbcc36bc9ca11b7ae69691a501751"
-  integrity sha512-SsaRPiSR1StC0vD9GhnXfx4I+L8hy669lzilveH9q/pW5TvPswMunj+4JvParYAJveSr81aaND2BqRXEHyYs1w==
+cdk8s@2.7.4:
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.7.4.tgz#42b3ccf83a27232585769fde743fbf8f287f3281"
+  integrity sha512-zmdL+i/Hysxh8Sq71aJOXDdyUxSlqpda/JBVLxtIU9Yt1bopIvC270kANvmkkwaS+SUwEJuY5xCxGm/Qy1lg5g==
   dependencies:
     fast-json-patch "^3.1.1"
     follow-redirects "^1.15.2"
@@ -1696,10 +1696,10 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
-constructs@10.1.254:
-  version "10.1.254"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.254.tgz#4f235be6b43085c6d102cafb9b2f9740faf30f01"
-  integrity sha512-F1F6jyI0VjEQ7RWv8a9AzdHDRXPpg/VpPRqUbI8/JlGsphbTfnrtIOsj11XadZpMHBme6FXly0fGqIq84c5Xng==
+constructs@10.1.255:
+  version "10.1.255"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.255.tgz#940cfd731e9ab554bb7d314ce97466aaad80c1a3"
+  integrity sha512-m7ddP9mF92096r4/2oqUg8sUYNdt7x2tjRSltnTtgvqiasBr0gSjzLkHqlGR0IrnvQWemv1kA1GESWxYAK20vw==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -3917,10 +3917,10 @@ jsii-diff@^1.75.0:
     log4js "^6.7.1"
     yargs "^16.2.0"
 
-jsii-docgen@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.1.0.tgz#335c44f270dc0bfd7ea634ef30a7c06ba25e986e"
-  integrity sha512-7k90mHani3yNr2U/Gx2JBrgke3p2pp0qnNesb9gwoVj7mNgzUmWdssDy9dz+4GA+JqzAV0eI4mIJcEOvwzzN8w==
+jsii-docgen@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.1.1.tgz#9a3b4511c61756b1e852b65d9987cee1f30209b7"
+  integrity sha512-62g0/atGJllFeJRBo/limdSsmPzxJOZiQZ9Ki5djarzvtK0AeJmnCiKpnn6qTJJkkPTTp6sVQPx56ihMwKVtYA==
   dependencies:
     "@jsii/spec" "^1.75.0"
     case "^1.6.3"
@@ -5036,10 +5036,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.67.58:
-  version "0.67.58"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.67.58.tgz#1cd76a385825f8b0e3fdeab5f499c154fa77b8ce"
-  integrity sha512-Y7+pd7wv/G/Wn2rS0IJbVZTmUqIegvmUDF8HNoIWIx9Xem1+KBXLaYePdbmH31ovjNDLIFr5MyvVp27FHSVDoA==
+projen@^0.67.59:
+  version "0.67.59"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.67.59.tgz#1980bf85b1abc802f09c63642afbd8fc8837cf59"
+  integrity sha512-cBn/1sNKefHODxWyd7L6BB8vHlPd7CQTcAPD1c3w4zFPxL2+jMdXAqLxB+soJ1B3L7bxbJeBJgiV+OXudY/J2A==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
