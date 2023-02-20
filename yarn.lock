@@ -291,10 +291,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdk8s/projen-common@^0.0.248":
-  version "0.0.248"
-  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.248.tgz#50420f762f3367ef6f60a8cc5429d0ff46c728d0"
-  integrity sha512-VyFBlqQNyXf6RC24Po254njXtnrbrmdcOPvsXgkWbRBqf61fdx4iWJoS9gXhL/HRj22qdkb9FIMq9RvPj+uTmg==
+"@cdk8s/projen-common@^0.0.249":
+  version "0.0.249"
+  resolved "https://registry.yarnpkg.com/@cdk8s/projen-common/-/projen-common-0.0.249.tgz#0b784a1c0f16e4cef2c4eb5d7c4000561d1637e8"
+  integrity sha512-+hJZgjVkdIWUrKgwcOyk9IO8BpbdYzXDMRuR6/pTQdYajKA2/hpVe0cLRynAEEilvGfNdhH+c7Mz/0eTEBYYkw==
   dependencies:
     codemaker "^1.75.0"
 
@@ -1481,10 +1481,10 @@ case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s@2.7.4:
-  version "2.7.4"
-  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.7.4.tgz#42b3ccf83a27232585769fde743fbf8f287f3281"
-  integrity sha512-zmdL+i/Hysxh8Sq71aJOXDdyUxSlqpda/JBVLxtIU9Yt1bopIvC270kANvmkkwaS+SUwEJuY5xCxGm/Qy1lg5g==
+cdk8s@2.7.5:
+  version "2.7.5"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.7.5.tgz#414b2d4fd8152f2219af34af26166d31c4f2ea67"
+  integrity sha512-TqhaSOXDnN7uhYnZb1TiS8TCeQ4En7siKnAPDfbVKQpxLXeULP21L1HKJTkOQZEGRQzFO/GQWwsOcovBpk4ivA==
   dependencies:
     fast-json-patch "^3.1.1"
     follow-redirects "^1.15.2"
@@ -3917,10 +3917,10 @@ jsii-diff@^1.75.0:
     log4js "^6.7.1"
     yargs "^16.2.0"
 
-jsii-docgen@^7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.1.1.tgz#9a3b4511c61756b1e852b65d9987cee1f30209b7"
-  integrity sha512-62g0/atGJllFeJRBo/limdSsmPzxJOZiQZ9Ki5djarzvtK0AeJmnCiKpnn6qTJJkkPTTp6sVQPx56ihMwKVtYA==
+jsii-docgen@^7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.1.2.tgz#db1ce44b6b38ef6abf8fc26507c73e1108014a02"
+  integrity sha512-aAk1ex+iGf3WBMy3ohB72vrW87tTbEYq/dfjnuNZOhC5WAvDJpKJxG6hQg1i1ccQL2cEFDF09Yx/pUKF7G32ag==
   dependencies:
     "@jsii/spec" "^1.75.0"
     case "^1.6.3"
