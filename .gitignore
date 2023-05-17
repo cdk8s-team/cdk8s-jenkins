@@ -64,3 +64,4 @@ tsconfig.json
 !/.github/workflows/security.yml
 !/.github/workflows/triage.yml
 !/.github/workflows/stale.yml
+!/.github/workflows/upgrade-configuration-main.yml
