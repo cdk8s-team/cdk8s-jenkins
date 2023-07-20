@@ -14,6 +14,7 @@
     ".github/workflows/stale.yml",
     ".github/workflows/triage.yml",
     ".github/workflows/upgrade-configuration-main.yml",
+    ".github/workflows/upgrade-dev-dependencies-main.yml",
     ".github/workflows/upgrade-main.yml",
     ".gitignore",
     ".mergify.yml",
