@@ -1721,10 +1721,10 @@ case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s@2.60.0:
-  version "2.60.0"
-  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.60.0.tgz#a299b8ffa7cb33c0c72bdbd99514d10ad7ef72cc"
-  integrity sha512-65hp3sjf61zvBo9r3pna/ed1wIodXa9FynOELwyTYBsVez4jfwI0B8gWNngB16GtklBJ/PKI0DWvJVB0IFE9Kw==
+cdk8s@2.61.0:
+  version "2.61.0"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.61.0.tgz#49870faa83712fa682f00b3df4833e729d19e0db"
+  integrity sha512-GlGARlQC7xjYF9JKlh679naBYwlt9dTJeCYvf+WhvKF96P/EKplMBMpd1BZxdmaD88RZvU4UjAYP/C30t0PHmg==
   dependencies:
     fast-json-patch "^3.1.1"
     follow-redirects "^1.15.2"
@@ -5185,13 +5185,13 @@ object.assign@^4.1.4:
     object-keys "^1.1.1"
 
 object.fromentries@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/object.fromentries/-/object.fromentries-2.0.6.tgz#cdb04da08c539cffa912dcd368b886e0904bfa73"
-  integrity sha512-VciD13dswC4j1Xt5394WR4MzmAQmlgN72phd/riNp9vtD7tp4QQWJ0R4wvclXcafgcYK8veHRed2W6XeGBvcfg==
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/object.fromentries/-/object.fromentries-2.0.7.tgz#71e95f441e9a0ea6baf682ecaaf37fa2a8d7e616"
+  integrity sha512-UPbPHML6sL8PI/mOqPwsH4G6iyXcCGzLin8KvEPenOZN5lpCNBZZQ+V62vdjB1mQHrmqGQt5/OJzemUA+KJmEA==
   dependencies:
     call-bind "^1.0.2"
-    define-properties "^1.1.4"
-    es-abstract "^1.20.4"
+    define-properties "^1.2.0"
+    es-abstract "^1.22.1"
 
 object.groupby@^1.0.0:
   version "1.0.1"
