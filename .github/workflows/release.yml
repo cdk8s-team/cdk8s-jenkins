@@ -232,3 +232,6 @@ jobs:
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         run: npx -p publib@latest publib-nuget
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
