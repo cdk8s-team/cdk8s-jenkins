@@ -62,14 +62,14 @@ Returns a string representation of this construct.
 ##### `addBasePlugins` <a name="addBasePlugins" id="cdk8s-jenkins.Jenkins.addBasePlugins"></a>
 
 ```typescript
-public addBasePlugins(basePlugins: Plugin): void
+public addBasePlugins(basePlugins: ...Plugin[]): void
 ```
 
 Add base plugins to jenkins instance.
 
 ###### `basePlugins`<sup>Required</sup> <a name="basePlugins" id="cdk8s-jenkins.Jenkins.addBasePlugins.parameter.basePlugins"></a>
 
-- *Type:* <a href="#cdk8s-jenkins.Plugin">Plugin</a>
+- *Type:* ...<a href="#cdk8s-jenkins.Plugin">Plugin</a>[]
 
 List of base plugins.
 
@@ -78,14 +78,14 @@ List of base plugins.
 ##### `addPlugins` <a name="addPlugins" id="cdk8s-jenkins.Jenkins.addPlugins"></a>
 
 ```typescript
-public addPlugins(plugins: Plugin): void
+public addPlugins(plugins: ...Plugin[]): void
 ```
 
 Add custom plugins to jenkins instance.
 
 ###### `plugins`<sup>Required</sup> <a name="plugins" id="cdk8s-jenkins.Jenkins.addPlugins.parameter.plugins"></a>
 
-- *Type:* <a href="#cdk8s-jenkins.Plugin">Plugin</a>
+- *Type:* ...<a href="#cdk8s-jenkins.Plugin">Plugin</a>[]
 
 List of custom plugins.
 
@@ -94,14 +94,14 @@ List of custom plugins.
 ##### `addSeedJobs` <a name="addSeedJobs" id="cdk8s-jenkins.Jenkins.addSeedJobs"></a>
 
 ```typescript
-public addSeedJobs(seedJobs: SeedJob): void
+public addSeedJobs(seedJobs: ...SeedJob[]): void
 ```
 
 Add seed jobs to jenkins instance.
 
 ###### `seedJobs`<sup>Required</sup> <a name="seedJobs" id="cdk8s-jenkins.Jenkins.addSeedJobs.parameter.seedJobs"></a>
 
-- *Type:* <a href="#cdk8s-jenkins.SeedJob">SeedJob</a>
+- *Type:* ...<a href="#cdk8s-jenkins.SeedJob">SeedJob</a>[]
 
 List of seed jobs.
 
