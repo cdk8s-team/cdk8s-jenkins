@@ -257,7 +257,9 @@ public readonly seedJobs: SeedJob[];
 
 List of seed job configuration for Jenkins resource.
 
-For more information about seed jobs, please take a look at { @link https://github.com/jenkinsci/job-dsl-plugin/wiki/Tutorial---Using-the-Jenkins-Job-DSL Jenkins Seed Jobs Documentation }.
+For more information about seed jobs, please take a look at {
+
+> [https://github.com/jenkinsci/job-dsl-plugin/wiki/Tutorial---Using-the-Jenkins-Job-DSL Jenkins Seed Jobs Documentation }.](https://github.com/jenkinsci/job-dsl-plugin/wiki/Tutorial---Using-the-Jenkins-Job-DSL Jenkins Seed Jobs Documentation }.)
 
 ---
 
