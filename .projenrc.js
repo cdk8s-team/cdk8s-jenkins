@@ -27,6 +27,9 @@ const project = new Cdk8sTeamJsiiProject({
       schedule: javascript.UpgradeDependenciesSchedule.expressions(['0 0 * * *']),
     },
   },
+  eslintOptions: {
+    ignorePatterns: ['src/imports/*.ts'],
+  },
 });
 
 project.synth();
