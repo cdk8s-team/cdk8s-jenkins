@@ -4,6 +4,8 @@
 
 ### Jenkins <a name="Jenkins" id="cdk8s-jenkins.Jenkins"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 A jenkins instance.
 
 #### Initializers <a name="Initializers" id="cdk8s-jenkins.Jenkins.Initializer"></a>
